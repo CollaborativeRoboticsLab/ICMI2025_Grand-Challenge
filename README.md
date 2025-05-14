@@ -21,7 +21,7 @@ A double-blind review process will be used to ensure fairness. Each paper will b
 
 ### Program Committee
 
-* Matthew Vestal
+* Matthew Vestal (Matthew.Vestal@canberra.edu.au)
 * James Ireland
 * Damith Herath
 * Xing Wang
