@@ -111,8 +111,8 @@ def assignLab(labelsUnEncoded,mask_imgs):
 
 
 
-def YOLOdataGen():
-    annotation_file_path = 'PATH_TO_YOUR_TRAINING_ANNOTATION_XML_FILE.xml'  # Replace with your XML file path
+def YOLOdataGen(annotation_file_path,path_to_annotations): #'PATH_TO_YOUR_TRAINING_ANNOTATION_XML_FILE.xml'
+    #annotation_file_path = 'PATH_TO_YOUR_TRAINING_ANNOTATION_XML_FILE.xml'  # Replace with your XML file path
     with open(annotation_file_path, 'r', encoding='utf-8') as file:
         xml_content = file.read()
     # Parse the XML content
@@ -169,7 +169,7 @@ def YOLOdataGen():
             listed[0] = int(listed[0])
             output[j] = str(listed).replace('[','').replace(']','').replace(',', ' ')
         idx = str(i)
-        fname = 'dataset/train/testlabs/PCAFrame'+idx.zfill(6)+'.txt'
+        fname = path_to_anntations+idx.zfill(6)+'.txt'
         
         with open(fname, 'w') as f:
             f.write('\n'.join([''.join(l2) for l2 in output]))
